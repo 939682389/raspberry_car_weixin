@@ -1,0 +1,64 @@
+<!--pages/pi/pi.wxml-->
+
+<view class='flex  flex-row justify-center margin text-xl '>
+  <scroll-view scroll-x class="bg-green nav text-center">
+    <view class="cu-item {{0==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="0">
+      <text class="icon-taxi"></text> 遥控
+    </view>
+  </scroll-view>
+
+  <view class='forward button' bindtap='forward' bindlongpress='longforward' bindtouchend='leave'>
+    <text class='icon-fold'></text>
+  </view>
+  <view class='left button' bindtap='left' bindlongpress='longleft' bindtouchend='leave'>
+    <text class='icon-back'></text>
+  </view>
+  <view class='stop button' bindtap='stop'>
+    <text class='icon-round'></text>
+  </view>
+  <view class='right button' bindtap='right' bindlongpress='longright' bindtouchend='leave'>
+    <text class='icon-right '></text>
+  </view>
+  <view class='back button' bindtap='back' bindlongpress='longback' bindtouchend='leave'>
+    <text class='icon-unfold '></text>
+  </view>
+  <view>
+  </view>
+  <!--
+  <view class='button yup'> 
+  <text class='icon-round ' bindtap='yuntai'></text></view>
+ -->
+</view>
+<view class="padding bg-white ">
+  <view class='flex '>
+    <text class='icon-back' bindtap='lred'></text>
+    <view class="cu-progress radius striped active">
+      <view class="bg-red" style="width:{{lroa/18*10}}%;">{{lroa}}°</view>
+    </view>
+    <text class='icon-right' bindtap='ladd'></text>
+  </view>
+  <view class='flex margin-top'>
+    <text class='icon-back' bindtap='hred'></text>
+    <view class="cu-progress radius striped active">
+      <view class="bg-blue" style="width:{{hroa/9*10}}%;">{{hroa}}°</view>
+    </view>
+    <text class='icon-right' bindtap='hadd'></text>
+  </view>
+</view>
+
+<view class="padding-left-xl padding-right-xl" style='margin-top:400rpx;'>
+  <button class="cu-btn block line-orange lg" bindtap='getT'>
+    {{T}}</button>
+</view>
+<view class="padding-xl">
+  <button class="cu-btn block line-orange lg" bindtap='takePhoto'>
+    <text class="icon-camera"></text> 拍照</button>
+</view>
+
+
+
+<swiper class="screen-swiper round-dot margin radius margin-bottom-xs margin-top-xs bg-black" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item class="radius" wx:for="{{swiperList}}" wx:key>
+    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+  </swiper-item>
+</swiper>

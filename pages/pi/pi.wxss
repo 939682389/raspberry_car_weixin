@@ -1,0 +1,65 @@
+/* pages/pi/pi.wxss */
+.button{
+  position:absolute;
+  font-size:100rpx;
+}
+
+.forward {
+  top: 135px;
+}
+ 
+.left {
+  left: 75px;
+  top: 215px;
+}
+ 
+.right {
+  right: 75px;
+  top: 215px;
+}
+ .stop {
+  top: 215px;
+}
+.backLeft {
+  left: 0px;
+  top: 255px;
+}
+ .yuntai{
+   top: 355px;
+ }
+.backRight {
+  left: 120px;
+  top: 255px;
+}
+ 
+.back {
+  top: 300px;
+}
+ 
+.up {
+  left: 480px;
+  top: 195px;
+}
+ 
+.camLeft {
+  left: 420px;
+  top: 255px;
+}
+ 
+.camRight {
+  left: 540px;
+  top: 255px;
+}
+ 
+.down {
+  left: 480px;
+  top: 315px;
+}
+ 
+.reset{
+  left: 480px;
+  top: 135px
+}
+.yup{
+  top: 100px
+}
